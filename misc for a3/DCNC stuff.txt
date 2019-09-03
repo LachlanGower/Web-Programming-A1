@@ -1,0 +1,27 @@
+Q1
+MAC is Data link layer
+	MAC Address is fixed and never changes
+IP is Network Layer
+
+Q2
+CSMA
+	Collision Detection
+	Collision Avoidance
+Perisistent
+	keep checking channel if idle send
+	collisions increase as propagation delay increases
+Non-Persistent
+	if channel is busy wait random time before trying again
+Probability
+	if idle attempt to send
+	if busy and check if p is less than predefined amount
+	recalc p and check if p is less than predefined p
+
+Q3
+X->a-b-c->Y:transmitting 56 octets
+each packet has 4 octets header
+
+4 * 60 octets: time in octet times = 240ot
+5 * 32 octets: 160ot
+10 * 12 octets: 120ot
+17 * 8 octets: 136ot

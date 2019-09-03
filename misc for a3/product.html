@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 2</title>
+    
+    <!-- Keep wireframe.css for debugging, add your css to style.css -->
+    <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
+	  
+	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+    <script src='../wireframe.js'></script>
+	  
+    <script></script>
+	<script src="js/test.js"></script>
+    <!-- All Images sourced from Jaycar.com.au or iconfinder. they have been embedded and I have not affiliation with Jaycar or iconfinder artists, these images are used for educational purposes only--> 
+  </head>
+
+  <body>
+    
+    <div id="headerbanner">
+        <header>
+            <img src="https://www.jaycar.com.au/medias/sys_master/images/hc1/h46/8872834138142/jaycar-logo-original.png"/>
+        </header>
+        <nav>
+            <a class = "button" href = "products.php">
+                Browse Products
+            </a>
+            <a class = "button" href = "login.php">
+                Login
+            </a>
+        </nav>
+    </div>
+    <main class = "container">
+		<div class = "product_modal" id = "pmodal">
+			
+			<form action = "https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product" target="_new" method="post" onsubmit = "return validation()">
+				<!--https://www.jaycar.com.au/hdmi-cable-with-rotating-plugs-1-5m/p/WQ7401-->
+				<div id = "product_img">
+					<img src="https://www.jaycar.com.au/medias/sys_master/images/9086409080862/hdmi-cable-with-rotating-plugs-1-5mImageMain-515.jpg">
+				</div>
+				
+				<div id = "product_title"> HDMI Cable with rotating plugs</div>
+				
+			
+				<div id = "product_description">
+					A HDMI cable with two plugs that rotate 180 degrees for easy installation. Gold Plated contact material and Plastic Casing. Supports Resolution up to 1600p.
+				</div>
+				
+                <div id = "product_item">
+					
+                	<input type="hidden" name="id" value="0x0000"/>
+					
+					Size:&nbsp;<select id = "sizeform" name='option' size='1' onchange = "changePrice()">
+  						<option value='1.5m' >1.5m</option>
+  						<option value='3m' >3m</option>
+  						<option value='9m' >9m</option>
+					</select><br/>
+					
+					<div class = "quantity_container">
+						<span>Quantity: </span>
+						
+						<div id = "quantity_box">
+							<div class = "quantity_button" onclick="quantity(-1)">-</div>
+						
+							<input type="text" id = "quantityform"  name="qty" pattern="^[0-9]+" value="1" onblur = "isInvalid()" onchange = "changePrice()"/>
+						
+							<div class = "quantity_button" onclick="quantity(1)">+</div>
+						</div>
+					</div>
+					<br/>
+					
+					<div id = "product_price">
+						$4.99
+					</div>
+						
+					
+					<input class = "product_button submit button" type="submit" value="Add To Cart"/>
+				</div>
+
+			</form>
+		</div>
+		
+    </main>
+
+    <footer>
+      <div>&copy;<script>
+        document.write(new Date().getFullYear());
+      </script> Lachlan Gower, S3723825</div>
+      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+      <div><button 	id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

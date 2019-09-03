@@ -1,0 +1,75 @@
+<?php
+        // This PHP code inserts CSS to style the "current page" link in the nav area
+        $here = $_SERVER['SCRIPT_NAME']; 
+        $bits = explode('/',$here); 
+        $filename = $bits[count($bits)-1]; 
+        echo "nav a[href$='$filename'] {
+        box-shadow: 1px 1px 1px 2px navy;
+      }";
+      ?>
+
+<!--Login Modal-->
+		
+        <div class = "login_modal" id = "modal">
+			
+            <form action = "https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=login" target="_self" method="post">
+
+				<input class = "loginform" type="email" name="email" value="" placeholder = "Email"/><br/>
+
+				<input class = "loginform" type="password" name="password" value="" placeholder = "Password"/><br/>
+                
+				<input class = "submit button" type="submit" value="Login"/>
+
+			</form>
+    	</div>
+		<!-- -->
+		
+		
+		<div class = "product_modal" id = "pmodal">
+			
+			<form action = "https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product" target="_new" method="post" onsubmit = "return validation()">
+				<!--https://www.jaycar.com.au/hdmi-cable-with-rotating-plugs-1-5m/p/WQ7401-->
+				<div id = "product_img">
+					<img src="https://www.jaycar.com.au/medias/sys_master/images/9086409080862/hdmi-cable-with-rotating-plugs-1-5mImageMain-515.jpg">
+				</div>
+				
+				<div id = "product_title"> HDMI Cable with rotating plugs</div>
+				
+			
+				<div id = "product_description">
+					A HDMI cable with two plugs that rotate 180 degrees for easy installation. Gold Plated contact material and Plastic Casing. Supports Resolution up to 1600p.
+				</div>
+				
+                <div id = "product_item">
+					
+                	<input type="hidden" name="id" value="0x0000"/>
+					
+					Size:&nbsp;<select id = "sizeform" name='option' size='1' onchange = "changePrice()">
+  						<option value='1.5m' >1.5m</option>
+  						<option value='3m' >3m</option>
+  						<option value='9m' >9m</option>
+					</select><br/>
+					
+					<div class = "quantity_container">
+						<span>Quantity: </span>
+						
+						<div id = "quantity_box">
+							<div class = "quantity_button" onclick="quantity(-1)">-</div>
+						
+							<input type="text" id = "quantityform"  name="qty" pattern="^[0-9]+" value="1" onblur = "isInvalid()" onchange = "changePrice()"/>
+						
+							<div class = "quantity_button" onclick="quantity(1)">+</div>
+						</div>
+					</div>
+					<br/>
+					
+					<div id = "product_price">
+						$4.99
+					</div>
+						
+					
+					<input class = "product_button submit button" type="submit" value="Add To Cart"/>
+				</div>
+
+			</form>
+		</div>

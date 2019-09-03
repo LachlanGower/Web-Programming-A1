@@ -1,0 +1,639 @@
+*
+{
+	font-family: Calibri;
+}
+body
+{
+    --accent-color: #EE4035;
+    --secondary-bg-color: hsl(225, 100%, 27%);
+    --main-bg-color: hsl(226, 23%, 14%);
+    width:100%;
+    height:100%;
+    min-height: 100%;
+    min-width: 475px;
+	margin: 0;
+    padding: 0;
+	overflow: visible;
+}
+
+
+.container
+{
+    background-color: var(--main-bg-color);
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    padding-top:2%;
+    padding-bottom:2%;
+}
+
+
+/*
+TOP BAR STYLING
+*/
+#headerbanner
+{
+    overflow: hidden;
+    width:100%;
+    height:15vh;
+    min-height: 75px;
+    max-height: 100px;
+    min-width: 485px;
+    display: block;
+}
+header
+{
+    display:inline-block;
+    float:left;
+    width:calc(220px - 1%);
+    height:100%;
+    text-align: left;
+    background-color: var(--secondary-bg-color);
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:1%;
+}
+header img
+{
+    width:190px;
+    height:46px;
+}
+nav
+{
+    border-left-color: var(--accent-color);
+    border-left-width:10px;
+    border-left-style: solid;
+    height:100%;
+    width:calc(100% - 220px - 1% - 40px - 10px);
+    display:inline-block;
+    background-color: white;
+    overflow: hidden;
+    padding:40px;
+    padding-left:1%;
+}
+
+
+
+/*
+ALL BUTTON STYLING
+*/
+.button, .button:visited
+{   
+    margin: 5px;
+	width: 100%;
+    max-width:100px;
+    padding: 1em;
+    background-color: hsl(225, 100%, 27%);
+    text-decoration: none;
+    color:white;
+    font-family: Calibri;
+    font-size:100%;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 0.2em;
+}
+.button:hover, .button:active
+{
+    background-color: var(--accent-color);
+}
+
+
+
+
+/*
+CAROUSEL STYLING
+*/
+.carousel
+{
+    margin:auto;
+    max-width: 1200px;
+	height: 100%;
+    width:90%;
+    background-color: white;
+    margin-top:20px;
+    margin-bottom:50px;
+    position:relative;
+}
+.carousel_slide
+{
+	position:relative;
+    display:none;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-align: center;
+}
+.carousel_slide img
+{
+	display: block;
+	height:300px;
+	position:absolute;
+	top:0;
+	left:0;
+	margin-right:calc(50% - 150px);
+	margin-left:calc(50% - 150px);
+}
+.carousel_arrow
+{
+    top:calc(150px - 45px);
+    right:100%;
+    box-sizing: border-box;
+    position:absolute;
+    height:80px;
+    padding-top:10px;
+    padding-bottom:0px;
+    padding-left:2px;
+    width:3%;
+    background-color: hsla(225, 10%, 20%, 0.8);
+    color:white;
+    font-family: cursive;
+    font-size:40px;
+    transition-duration: 1s;
+}
+
+#right
+{
+    left:100%;
+}
+.carousel_arrow:hover
+{
+    background-color: black; 
+	cursor:pointer;
+}
+.slide_item
+{
+    box-sizing: border-box;
+	float:left;
+    width:calc(100% / 3);
+    min-width: 100px;
+    min-height: 300px;
+    transition-duration: 0.5s;
+    background-color: white;
+    border-left:10px solid var(--secondary-bg-color);
+	font-family: Calibri Light;
+	font-size: 150%;
+	color:lightslategray;
+	
+}
+.carousel_products
+{
+	background-color:transparent;
+	float:none;
+    border:0;
+	position:relative;
+    border-bottom:10px solid var(--secondary-bg-color);
+    width:100%;
+    margin:0;
+}
+.carousel_products:hover
+{
+	border-color: var(--accent-color);
+}
+.slide_item:hover{
+	
+    border-color:var(--accent-color);
+    cursor:pointer;
+}
+
+
+
+/*
+social media whitespace strip
+*/
+.social_Media
+{
+    background-color: white;
+    min-height: 100px;
+    text-align: center;
+}
+.social_Media img
+{
+    width:50px;
+    padding: 50px;
+}
+
+
+
+/*
+Adaptive scroll element STYLING
+*/
+#info_scroller section
+{
+    height:100%;
+    width:100%;
+	text-align:center;
+    white-space: nowrap;
+    overflow:auto;
+}
+#info_scroller section .index_scroll
+{
+
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 389px; 
+    padding:1%;
+    margin-right: 20px;
+}
+#info_scroller section .index_scroll:last-child
+{
+    margin-right:0;
+}
+#info_scroller section .index_scroll p
+{
+    border-top-width:5px;
+    border-top-style: solid;
+    border-top-color: var(--accent-color);
+    display: inline-block;
+    vertical-align: top;
+    height: 250px;
+    width: 96%;
+    padding:2%;
+    background-color: white;
+    font-family: Calibri;
+    text-align: left;
+    
+}
+#info_scroller section .index_scroll span
+{
+    font-family: Calibri Light;
+    font-size: 140%;
+    color:lightslategray;
+}
+#_scroller
+{
+    width: 100%;
+    min-width: 50px;
+    height:100%;
+    margin-top:0;
+    white-space: nowrap;
+    overflow: auto;
+}
+#_item
+{
+    display: inline-grid;
+    width: 520px;
+    height: 100%;
+    min-height: 320px;
+    margin-left:calc(50% - 260px);
+    background-color: var(--main-bg-color);
+}
+#_item:last-child
+{
+    margin-right:calc(50% - 260px);
+}
+
+
+
+/*
+Product list STYLING
+*/
+.products_main
+{
+    width:96%;
+    margin:2%;
+    display: flex;
+}
+.product
+{
+    box-sizing: border-box;
+	display: inline-flex;
+    width:300px;
+    height:210px;
+    margin-left:10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-left: 10px solid var(--secondary-bg-color); 
+	transition-duration: 0.5s;
+	text-align-last:left; 
+	position:relative;
+}
+.product img
+{
+	position:absolute;
+	height:90%;
+	right:0;
+}
+.product:hover
+{
+    border-color:var(--accent-color); 
+	cursor:pointer;
+}
+.miniDescriptor
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	transition-duration: 1s;
+	color:transparent;
+	background-color: transparent;
+	font-size:150%;
+}
+.miniDescriptor:hover
+{
+	background-color: hsla(226, 23%, 14%, 0.9);
+	color:white;
+}
+.miniDescriptor:hover span
+{
+	color:lightslategray;
+}
+.miniDescriptor span
+{
+	font-family: Calibri Light;
+}
+
+
+
+
+/*
+a modal window for login screen (lots of javascript stuff here) STYLING
+*/
+#login_button
+{
+	cursor: pointer;
+}
+.login_modal
+{
+	box-sizing: border-box;
+	visibility: visible;
+    position:relative;
+    top:0;
+    left:0;
+    right:0;
+    background-color: hsla(226, 23%, 14%, 0.9);
+    width:100vw;
+    height:100vh;
+}
+form
+{
+    position:absolute;
+	text-align: center;
+    top:20vh;
+    right:calc(50% - 200px - 15px);
+    width: 400px;
+    margin:15px;
+    background-color: white;
+    border-bottom:5px solid var(--accent-color);
+}
+.loginform
+{
+    margin:10px;
+    text-align: center;
+    border:0;
+    border-bottom: 2px dotted var(--accent-color);
+    height:30px;
+    width:calc(100% - 20px - 4px); 
+}
+
+
+
+/*
+a modal style for individual products, a lot more scripting here
+*/
+.product_modal
+{
+	box-sizing: border-box;
+	visibility: visible;
+    position:relative;
+    top:0;
+    left:0;
+    right:0;
+    background-color: hsla(226, 23%, 14%, 0.9);
+    width:100vw;
+    height:100vh;
+}
+.product_modal form
+{
+	top:5%;
+	margin-left:calc(50% - 300px);
+	margin-right:calc(50% - 300px);
+	height:400px;
+	width: 600px;
+	left:0;
+}
+#product_item
+{
+	text-align: right;
+	position:absolute;
+	top:20%;
+	right:5%;
+	height:200px;
+}
+
+#sizeform
+{
+	display: inline-block;
+	height:30px;
+	border:0;
+	border-right: 2px solid var(--accent-color);
+	border-left: 2px solid var(--accent-color);
+	text-align: center;
+	width:100px;
+}
+#quantityform
+{
+	float:left;
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+	width:50%;
+	height:30px;
+	border:0;
+	border-right: 2px solid var(--accent-color);
+	border-left: 2px solid var(--accent-color);
+	text-align: center;
+}
+#quantityform:invalid
+{
+	border:1px solid red;
+	background-color:var(--accent-color);
+}
+.quantity_container
+{
+	height:30px;
+	width:100%;
+	display:block;
+	
+}
+.quantity_container span
+{
+	position:absolute;
+	left:-32px;
+	top:32px;
+}
+#quantity_box
+{
+	width:100px;
+	height:30px;
+	overflow: hidden;
+	display:inline-block;
+}
+.quantity_button
+{
+	float:left;
+	text-align: center;
+	width:25%;
+	height:100%;
+	border-right: 2px solid var(--accent-color);
+	font-size:150%;
+	box-sizing: border-box;
+	background-color: var(--secondary-bg-color);
+	color:white;
+}
+.quantity_button:first-child
+{
+	border:0;
+	border-left: 2px solid var(--accent-color);
+}
+.quantity_button:hover
+{
+	background-color: var(--accent-color);
+	cursor: pointer;
+}
+.product_button
+{
+	position:absolute;
+	right:0;
+	bottom:0;
+	margin-right: 3px;
+}
+#product_title
+{
+	position:absolute;
+	top:0;
+	margin-left:10%;
+	font-size:130%;
+	font-family:Calibri Light;
+	color:lightslategray;
+}
+#product_img img
+{
+	position:absolute;
+	width:300px;
+	left:0;
+	top:20px;
+}
+#product_description
+{
+	position:absolute;
+	bottom:0;
+}
+#product_price
+{
+	position:absolute;
+	right:110px;
+	bottom:10px;
+}
+
+
+
+
+
+.submit
+{
+	transition-duration: 0s;
+    border-color: var(--secondary-bg-color);
+    border-style:solid;
+    padding:2%
+}
+.submit:hover, .submit:active
+{
+    cursor:pointer;
+    border-color: #EE4035;
+}
+
+
+.header_whitespace
+{
+	background-color: white;
+	padding-left:20px;
+	font-size: 300%;
+	font-family: Calibri Light;
+	color:lightslategray;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+footer
+{
+    position: relative;
+    bottom: 0;
+    box-sizing: border-box;
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    min-width: 100%;
+    height:10vh;
+    padding: 2%;
+    color: white;
+    font-family:Verdana;
+    font-size: 8px;
+}
+
+
+
+
+.slide_in
+{
+  	-webkit-animation-name: slideIn;
+  	-webkit-animation-duration: 0.2s;
+  	animation-name: slideIn;
+  	animation-duration: 0.2s;
+}
+.slide_down
+{
+  	-webkit-animation-name: slideDown;
+  	-webkit-animation-duration: 0.2s;
+  	animation-name: slideDown;
+  	animation-duration: 0.2s;
+}
+@keyframes slideDown
+{
+	0%   {background-image: linear-gradient(to top,var(--secondary-bg-color), var(--secondary-bg-color) 100%);}
+	
+	10%	{background-image: linear-gradient(to top, var(--secondary-bg-color), var(--secondary-bg-color) 90%, transparent 90%, transparent 100%);}
+	
+	20%	{background-image: linear-gradient(to top, var(--secondary-bg-color), var(--secondary-bg-color) 80%, transparent 80%, transparent 100%);}
+	
+	30%	{background-image: linear-gradient(to top, var(--secondary-bg-color), var(--secondary-bg-color) 70%, transparent 70%, transparent 100%);}
+	
+	40%	{background-image: linear-gradient(to top, var(--secondary-bg-color), var(--secondary-bg-color) 60%, transparent 60%, transparent 100%);}
+	
+	50%	{background-image: linear-gradient(to top, var(--secondary-bg-color), var(--secondary-bg-color) 50%, transparent 50%, transparent 100%);}
+	
+	60%	{background-image: linear-gradient(to top, var(--secondary-bg-color), var(--secondary-bg-color) 40%, transparent 40%, transparent 100%);}
+	
+	70%	{background-image: linear-gradient(to top, var(--secondary-bg-color), var(--secondary-bg-color) 30%, transparent 30%, transparent 100%);}
+	
+	80%	{background-image: linear-gradient(to top, var(--secondary-bg-color), var(--secondary-bg-color) 20%, transparent 20%, transparent 100%);}
+	
+	90%	{background-image: linear-gradient(to top, var(--secondary-bg-color), var(--secondary-bg-color) 10%, transparent 10%, transparent 100%);}
+	
+	100%   {background-image: linear-gradient(to top,var(--secondary-bg-color) 0%, var(--secondary-bg-color) 0%, transparent 0% , transparent 100%);}
+}
+@keyframes slideIn
+{
+    0%   {background-image: linear-gradient(to left,var(--secondary-bg-color), var(--secondary-bg-color) 100%);}
+	
+	10%	{background-image: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-bg-color) 90%, transparent 90%, transparent 100%);}
+	
+	20%	{background-image: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-bg-color) 80%, transparent 80%, transparent 100%);}
+	
+	30%	{background-image: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-bg-color) 70%, transparent 70%, transparent 100%);}
+	
+	40%	{background-image: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-bg-color) 60%, transparent 60%, transparent 100%);}
+	
+	50%	{background-image: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-bg-color) 50%, transparent 50%, transparent 100%);}
+	
+	60%	{background-image: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-bg-color) 40%, transparent 40%, transparent 100%);}
+	
+	70%	{background-image: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-bg-color) 30%, transparent 30%, transparent 100%);}
+	
+	80%	{background-image: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-bg-color) 20%, transparent 20%, transparent 100%);}
+	
+	90%	{background-image: linear-gradient(to right, var(--secondary-bg-color), var(--secondary-bg-color) 10%, transparent 10%, transparent 100%);}
+	
+	100%   {background-image: linear-gradient(to left,var(--secondary-bg-color) 0%, var(--secondary-bg-color) 0%, transparent 0% , transparent 100%);}
+}
